@@ -1,0 +1,239 @@
+/* Reset */
+@font-face {
+  font-family: Josefin-sans;
+  src: url(img/static/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: Typo-Round;
+  src: url(img/Typo_Round_Regular_Demo.otf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: white;
+  font-family: JosefinSans;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+/* Header */
+
+.header{
+  background-color: #759bd1;
+  box-shadow: 1px 1px 5px 0px gray;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7.5vh;
+}
+#hero{
+  height: 92.5vh;
+}
+
+#hero_img{
+  height: 60%;
+  background: url(img/hands.jpg) no-repeat center center;
+  background-size:cover;
+  border-radius: 25px;
+}
+#hero_txt{
+  height: 15%;
+}
+#hero_txt h2{
+  font-size: 3.25em;
+}
+/* Logo */
+.logo{
+  display: inline-block;
+  color: white;
+  font-size: 40px;
+  margin-left: 10px;
+}
+/* Nav menu */
+.nav{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  overflow: hidden;
+}
+
+.menu a{
+  display: block;
+  padding: 15px 30px;
+  color: white;
+}
+.menu a:hover{
+  background-color: #739cd2;
+}
+.nav{
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+/* Menu Icon */
+.hamb{
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.hamb-line::before{
+  top: 5px;
+}
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
+/* Responsiveness */
+@media (min-width: 768px) {
+  .nav{
+      max-height: none;
+      top: 0;
+      position: relative;
+      float: right;
+      width: fit-content;
+      background-color: transparent;
+  }
+  .menu li{
+      float: left;
+  }
+  .menu a:hover{
+      background-color: transparent;
+      color: gray;
+
+  }
+  .hamb{
+      display: none;
+  }
+}
+
+.space{
+  height: 200px;
+
+}
+  
+.false {
+  text-align: center;
+  margin-top: 160px;
+  color: #759bd1;
+  font-family: "josefin Sans";
+}
+.form {
+  margin-top: 50px;
+  width: 60%;
+  height: 60px;
+  background-color: #a1d8ee;
+  color: #759bd1;
+  border: none;
+  font-size: 30px;
+  font-family: "josefin sans";
+  margin-bottom: 150px;
+}
+
+.form:hover {
+  background-color: #8dc6dd;
+}
+#klanten {
+  margin-top: 50px;
+  text-align: center;
+  color: #759bd1;
+}
+
+#review {
+  background-color: #a1d8ee;
+  border: 2px solid #8dc6dd;
+  height: auto;
+  align-items: center;
+  margin-top: 100px;
+  padding-bottom: 80px;
+}
+#reviewcontent {
+  text-align: start;
+  margin-left: 0px;
+}
+.startline {
+  margin-top: 90px;
+  color: white;
+}
+.starline_ending {
+  margin-top: 120px;
+  text-align: center;
+  color: white;
+}
+
+svg hover {
+  cursor: pointer;
+}
+
+.about {
+  margin: 40px;
+}
+#foot {
+  margin-top: 100px;
+  height: auto;
+  background-color: #759bd1;
+  padding-top: 100px;
+  color: white;
+  padding-bottom: 80px;
+}
+
+
+@media screen and (max-width: 600px) {
+  #navigation {
+    margin-top: auto;
+    font-size: medium;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .btnset {
+    font-size: 14px;
+  }
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
